@@ -1,1 +1,1 @@
-
+![Preview do projeto](./assets/preview.png)

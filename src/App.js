@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import WeatherDashboard from './components/WeatherDashboard/WeatherDashboard';
 
-function App() {
+
+export default function App() {
+
+  const estiloContainer = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  }
+
+  const estiloTitulo = {
+    fontFamily: 'Orbitron, sans-serif',
+    fontSize: '3rem',
+    color: "#fff"
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{background: 'linear-gradient(to bottom, #ff7e00, #ffb300, #ffd500)',minHeight: "100dvh",width: "100%",overflowX: "hidden"}}>
+      <div style={estiloContainer}>
+        <h1 style={estiloTitulo}>Previsão do Tempo</h1>
+        <WeatherDashboard />
+      </div>
     </div>
   );
 }
 
-export default App;
